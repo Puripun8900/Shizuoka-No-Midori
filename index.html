@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shizuoka Tea House - Premium Japanese Tea & Matcha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>静岡茶房</h1>
+                <span>Shizuoka Tea House</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Tea Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart" class="cart-btn">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Premium Tea from the Heart of Japan</h2>
+            <p>Discover the finest matcha and green tea from Shizuoka prefecture, where tradition meets excellence</p>
+            <a href="#products" class="cta-button">Explore Our Collection</a>
+        </div>
+        <div class="hero-image">
+            <img src="/placeholder.svg?height=500&width=600" alt="Traditional Japanese Tea Ceremony">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Tea Collection</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Teas</button>
+                <button class="filter-btn" data-filter="matcha">Matcha</button>
+                <button class="filter-btn" data-filter="sencha">Sencha</button>
+                <button class="filter-btn" data-filter="gyokuro">Gyokuro</button>
+                <button class="filter-btn" data-filter="hojicha">Hojicha</button>
+            </div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>From Shizuoka with Love</h2>
+                    <p>Nestled at the foot of Mount Fuji, Shizuoka prefecture has been Japan's premier tea-growing region for over 800 years. Our family has been cultivating tea in these fertile lands for five generations, perfecting the art of growing and processing the finest Japanese teas.</p>
+                    <p>Each cup tells a story of tradition, craftsmanship, and the unique terroir that makes Shizuoka tea exceptional. From ceremonial grade matcha to everyday sencha, we bring you the authentic taste of Japan.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Shizuoka Tea Fields">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>📍 Shizuoka Prefecture, Japan</p>
+                    <p>📧 info@shizuokateahouse.com</p>
+                    <p>📞 +81-54-XXX-XXXX</p>
+                    <p>🕒 Mon-Fri: 9:00 AM - 6:00 PM JST</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total: ¥<span id="cart-total">0</span></strong>
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>静岡茶房</h3>
+                    <p>Bringing you the finest tea from Shizuoka since 1923</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shizuoka Tea House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
