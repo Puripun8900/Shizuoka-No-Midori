@@ -1,1 +1,0 @@
-# Shizuoka-No-Midori
