@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shizuoka Tea House - Premium Japanese Tea</title>
+    <title>Shizuoka No Midori - Premium Japanese Tea</title>
     <style>
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         body {
             font-family: 'Georgia', serif;
             line-height: 1.6;
-            color: #2d3748;
-            background-color: #f7fafc;
+            color: #2d4a2b;
+            background-color: #fafafa;
         }
 
         .container {
@@ -24,8 +24,9 @@
             padding: 0 20px;
         }
 
+        /* Header */
         header {
-            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            background: linear-gradient(135deg, #2d5a2d, #4a7c4a);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -41,50 +42,43 @@
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .tagline {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         nav ul {
             display: flex;
             list-style: none;
             gap: 2rem;
-            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            opacity: 0.8;
+            color: #a8d5a8;
         }
 
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(74, 124, 89, 0.7)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/><path fill="%232d5016" opacity="0.3" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(45, 90, 45, 0.7), rgba(74, 124, 74, 0.7)), 
+                        url('/placeholder.svg?height=600&width=1200') center/cover;
             color: white;
             text-align: center;
-            padding: 4rem 0;
+            padding: 6rem 0;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
@@ -92,37 +86,88 @@
         }
 
         .cta-button {
-            background: #e53e3e;
+            display: inline-block;
+            background: #6b8e6b;
             color: white;
             padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
             text-decoration: none;
-            display: inline-block;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .cta-button:hover {
-            background: #c53030;
+            background: #5a7a5a;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
-        .section {
+        /* Features Section */
+        .features {
             padding: 4rem 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .feature-card:nth-child(1) .feature-icon { background: #4a7c4a; }
+        .feature-card:nth-child(2) .feature-icon { background: #6b8e6b; }
+        .feature-card:nth-child(3) .feature-icon { background: #2d5a2d; }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 0;
+            background: #f8f9f8;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2d5016;
+            margin-bottom: 1rem;
+            color: #2d4a2b;
         }
 
-        .filters {
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .filter-buttons {
             display: flex;
             justify-content: center;
             gap: 1rem;
@@ -132,9 +177,9 @@
 
         .filter-btn {
             background: white;
-            border: 2px solid #4a7c59;
-            color: #4a7c59;
-            padding: 0.5rem 1.5rem;
+            border: 2px solid #6b8e6b;
+            color: #6b8e6b;
+            padding: 0.7rem 1.5rem;
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s;
@@ -143,39 +188,33 @@
 
         .filter-btn:hover,
         .filter-btn.active {
-            background: #4a7c59;
+            background: #6b8e6b;
             color: white;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
 
         .product-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
         .product-image {
             width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, #4a7c59, #2d5016);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
+            height: 200px;
+            object-fit: cover;
         }
 
         .product-info {
@@ -186,38 +225,39 @@
             font-size: 1.3rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
-            color: #2d5016;
+            color: #2d4a2b;
         }
 
         .product-description {
             color: #666;
             margin-bottom: 1rem;
-            line-height: 1.5;
+            font-size: 0.95rem;
         }
 
         .product-price {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #e53e3e;
+            color: #4a7c4a;
             margin-bottom: 1rem;
         }
 
         .add-to-cart {
-            background: #4a7c59;
+            width: 100%;
+            background: #6b8e6b;
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
+            padding: 0.8rem;
             border-radius: 8px;
             cursor: pointer;
             font-weight: bold;
-            width: 100%;
             transition: background 0.3s;
         }
 
         .add-to-cart:hover {
-            background: #2d5016;
+            background: #5a7a5a;
         }
 
+        /* Cart */
         .cart {
             position: fixed;
             top: 20px;
@@ -225,98 +265,183 @@
             background: white;
             padding: 1rem;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             min-width: 200px;
             z-index: 1000;
-        }
-
-        .cart-header {
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #2d5016;
-            border-bottom: 2px solid #4a7c59;
-            padding-bottom: 0.5rem;
         }
 
         .cart-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem;
-            background: #f7fafc;
-            border-radius: 5px;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
         }
 
         .cart-total {
             font-weight: bold;
-            font-size: 1.2rem;
-            color: #e53e3e;
             margin-top: 1rem;
             padding-top: 1rem;
-            border-top: 2px solid #4a7c59;
+            border-top: 2px solid #6b8e6b;
         }
 
-        .contact {
-            background: #2d5016;
-            color: white;
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background: white;
         }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea {
+        .about-image {
             width: 100%;
-            padding: 0.75rem;
-            border: none;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: #f8f9f8;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: #2d4a2b;
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            color: #6b8e6b;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #4a7c4a;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: #166fe5;
+        }
+
+        .facebook-icon {
+            font-size: 1.5rem;
+        }
+
+        .additional-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .additional-info h3 {
+            text-align: center;
+            color: #2d4a2b;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            padding: 1rem;
+            border-left: 4px solid #6b8e6b;
+            background: #f8f9f8;
             border-radius: 8px;
-            font-size: 1rem;
         }
 
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
+        .info-item h4 {
+            color: #2d4a2b;
+            margin-bottom: 0.5rem;
         }
 
+        .info-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
         footer {
-            background: #1a202c;
+            background: #2d4a2b;
             color: white;
             text-align: center;
             padding: 2rem 0;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
             .header-content {
                 flex-direction: column;
-                text-align: center;
+                gap: 1rem;
             }
-            
+
             nav ul {
-                justify-content: center;
-                margin-top: 1rem;
+                gap: 1rem;
             }
-            
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
             .cart {
                 position: relative;
                 top: auto;
@@ -325,20 +450,22 @@
                 max-width: 400px;
             }
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <div>
-                    <div class="logo">Shizuoka Tea House</div>
-                    <div class="tagline">Premium Japanese Tea from Shizuoka Prefecture</div>
-                </div>
+                <div class="logo">Shizuoka No Midori</div>
                 <nav>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -348,17 +475,41 @@
 
     <section id="home" class="hero">
         <div class="container">
-            <h1>Authentic Shizuoka Tea</h1>
-            <p>Experience the finest matcha and green tea directly from the tea gardens of Shizuoka Prefecture, Japan's premier tea-growing region.</p>
+            <h1>Shizuoka No Midori</h1>
+            <p>We personally pick the finest matcha all over Shizuoka Prefecture and sell it directly to customers online through our ordering system. Experience authentic Japanese tea culture delivered worldwide.</p>
             <a href="#products" class="cta-button">Shop Our Teas</a>
         </div>
     </section>
 
-    <section id="products" class="section">
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Tea?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍃</div>
+                    <h3>Premium Quality</h3>
+                    <p>Sourced directly from the finest tea gardens in Shizuoka Prefecture, known for producing Japan's highest quality tea.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Traditional Methods</h3>
+                    <p>Crafted using centuries-old techniques passed down through generations of master tea artisans.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Fresh Delivery</h3>
+                    <p>Carefully packaged and shipped fresh to preserve the authentic taste and aroma of our premium teas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Our Tea Collection</h2>
+            <p class="section-subtitle">Discover our carefully curated selection of premium Shizuoka teas, each with its unique character and flavor profile.</p>
             
-            <div class="filters">
+            <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All Teas</button>
                 <button class="filter-btn" data-filter="matcha">Matcha</button>
                 <button class="filter-btn" data-filter="sencha">Sencha</button>
@@ -368,62 +519,62 @@
 
             <div class="products-grid" id="products-grid">
                 <div class="product-card" data-category="matcha">
-                    <div class="product-image">Premium Matcha</div>
+                    <img src="/placeholder.svg?height=200&width=280" alt="Premium Matcha" class="product-image">
                     <div class="product-info">
-                        <h3 class="product-name">Ceremonial Grade Matcha</h3>
-                        <p class="product-description">Stone-ground premium matcha powder perfect for traditional tea ceremony. Rich, vibrant green color with smooth, sweet flavor.</p>
+                        <h3 class="product-name">Premium Ceremonial Matcha</h3>
+                        <p class="product-description">Finest grade matcha powder, perfect for traditional tea ceremonies. Rich, vibrant green color with a smooth, umami flavor.</p>
                         <div class="product-price">$45.00</div>
-                        <button class="add-to-cart" data-name="Ceremonial Grade Matcha" data-price="45.00">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('Premium Ceremonial Matcha', 45.00)">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="sencha">
-                    <div class="product-image">Premium Sencha</div>
+                    <img src="/placeholder.svg?height=200&width=280" alt="Sencha Supreme" class="product-image">
                     <div class="product-info">
-                        <h3 class="product-name">Shizuoka Sencha</h3>
-                        <p class="product-description">Classic Japanese green tea with fresh, grassy flavor and natural sweetness. Perfect for daily enjoyment.</p>
+                        <h3 class="product-name">Sencha Supreme</h3>
+                        <p class="product-description">Classic Japanese green tea with a fresh, grassy flavor and natural sweetness. Perfect for daily enjoyment.</p>
                         <div class="product-price">$28.00</div>
-                        <button class="add-to-cart" data-name="Shizuoka Sencha" data-price="28.00">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('Sencha Supreme', 28.00)">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="gyokuro">
-                    <div class="product-image">Premium Gyokuro</div>
+                    <img src="/placeholder.svg?height=200&width=280" alt="Gyokuro Elite" class="product-image">
                     <div class="product-info">
-                        <h3 class="product-name">Gyokuro Supreme</h3>
-                        <p class="product-description">Shade-grown premium tea with deep umami flavor and delicate sweetness. The finest grade of Japanese green tea.</p>
+                        <h3 class="product-name">Gyokuro Elite</h3>
+                        <p class="product-description">Shade-grown premium tea with intense umami flavor and deep complexity. The pinnacle of Japanese tea craftsmanship.</p>
                         <div class="product-price">$65.00</div>
-                        <button class="add-to-cart" data-name="Gyokuro Supreme" data-price="65.00">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('Gyokuro Elite', 65.00)">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="hojicha">
-                    <div class="product-image">Roasted Hojicha</div>
+                    <img src="/placeholder.svg?height=200&width=280" alt="Hojicha Roasted" class="product-image">
                     <div class="product-info">
-                        <h3 class="product-name">Roasted Hojicha</h3>
-                        <p class="product-description">Gently roasted green tea with warm, nutty flavor and beautiful amber color. Low caffeine, perfect for evening.</p>
+                        <h3 class="product-name">Hojicha Roasted</h3>
+                        <p class="product-description">Roasted green tea with a warm, nutty flavor and beautiful amber color. Low in caffeine, perfect for evening.</p>
                         <div class="product-price">$32.00</div>
-                        <button class="add-to-cart" data-name="Roasted Hojicha" data-price="32.00">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('Hojicha Roasted', 32.00)">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="matcha">
-                    <div class="product-image">Culinary Matcha</div>
+                    <img src="/placeholder.svg?height=200&width=280" alt="Culinary Matcha" class="product-image">
                     <div class="product-info">
-                        <h3 class="product-name">Culinary Grade Matcha</h3>
-                        <p class="product-description">Perfect for cooking, baking, and making matcha lattes. Strong flavor that holds up well in recipes.</p>
+                        <h3 class="product-name">Culinary Matcha</h3>
+                        <p class="product-description">High-quality matcha perfect for cooking, baking, and making matcha lattes. Strong flavor that shines in recipes.</p>
                         <div class="product-price">$25.00</div>
-                        <button class="add-to-cart" data-name="Culinary Grade Matcha" data-price="25.00">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('Culinary Matcha', 25.00)">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="sencha">
-                    <div class="product-image">Organic Sencha</div>
+                    <img src="/placeholder.svg?height=200&width=280" alt="Organic Sencha" class="product-image">
                     <div class="product-info">
                         <h3 class="product-name">Organic Sencha</h3>
-                        <p class="product-description">Certified organic sencha grown without pesticides. Clean, pure taste with bright green liquor.</p>
+                        <p class="product-description">Certified organic sencha grown without pesticides. Pure, clean taste with bright green color and fresh aroma.</p>
                         <div class="product-price">$35.00</div>
-                        <button class="add-to-cart" data-name="Organic Sencha" data-price="35.00">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('Organic Sencha', 35.00)">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -431,35 +582,93 @@
     </section>
 
     <div class="cart" id="cart">
-        <div class="cart-header">Shopping Cart</div>
+        <h3>Shopping Cart</h3>
         <div id="cart-items"></div>
         <div class="cart-total" id="cart-total">Total: $0.00</div>
+        <button class="cta-button" style="width: 100%; margin-top: 1rem;" onclick="checkout()">Checkout</button>
     </div>
 
-    <section id="contact" class="section contact">
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Shizuoka Tea</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>The Heart of Japanese Tea Culture</h3>
+                    <p>Shizuoka Prefecture is the heart of Japanese tea culture, producing over 40% of Japan's tea. Located at the foot of Mount Fuji, our region's unique climate, with its mild temperatures, adequate rainfall, and mountainous terrain, creates the perfect conditions for growing exceptional tea.</p>
+                    
+                    <h3>Our Heritage</h3>
+                    <p>We work directly with local tea farmers who have been perfecting their craft for generations. Many of our partner farms have been family-owned for over 200 years, passing down traditional cultivation and processing techniques from father to son.</p>
+                    
+                    <h3>From Garden to Cup</h3>
+                    <p>Each tea is carefully selected, processed using traditional methods, and packaged fresh to bring you the authentic taste of Shizuoka. From the ceremonial grade matcha used in traditional tea ceremonies to the everyday sencha perfect for daily enjoyment, we offer the finest selection of Japanese teas available.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>We believe that great tea brings people together and creates moments of peace in our busy lives. Our mission is to share the authentic taste and cultural heritage of Shizuoka tea with tea lovers around the world.</p>
+                </div>
+                <img src="/placeholder.svg?height=300&width=400" alt="Shizuoka Tea Plantation with Mount Fuji" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+            <p class="section-subtitle">Get in touch with us for orders, questions, or to learn more about our premium Shizuoka teas!</p>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p>For orders, inquiries, and customer support:</p>
+                    <a href="mailto:shizuokanomidori@gmail.com" class="contact-link">shizuokanomidori@gmail.com</a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Follow Us</h3>
+                    <p>Follow our Facebook page for updates on new teas and offers:</p>
+                    <a href="https://facebook.com/ShizuokaNoMidori" target="_blank" class="social-link">
+                        <span class="facebook-icon">📘</span> Shizuoka No Midori
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🕐</div>
+                    <h3>Business Hours</h3>
+                    <p>We're available 24 hours for online orders</p>
+                    <p><strong>Online Orders:</strong> 24/7 Available<br>
+                    <strong>Email Response:</strong> Within 24 hours<br>
+                    <strong>Customer Support:</strong> Always Ready</p>
                 </div>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
+            </div>
+            
+            <div class="additional-info">
+                <h3>Shipping & Guarantee</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>🚚 Free Worldwide Shipping</h4>
+                        <p>Free shipping on orders over $50. Standard delivery takes 7-14 business days.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>✅ Freshness Guarantee</h4>
+                        <p>All teas are packaged fresh and sealed for maximum flavor preservation.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🔄 Easy Returns</h4>
+                        <p>Not satisfied? Return within 30 days for a full refund.</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🏆 Quality Certified</h4>
+                        <p>All our teas are certified by the Shizuoka Tea Association.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Shizuoka Tea House. Premium Japanese tea delivered worldwide.</p>
+            <p>&copy; 2024 Shizuoka No Midori. Bringing authentic Japanese tea culture to the world.</p>
         </div>
     </footer>
 
@@ -468,75 +677,77 @@
         let cart = [];
         let total = 0;
 
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const productCards = document.querySelectorAll('.product-card');
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCart();
+        }
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                const filter = button.getAttribute('data-filter');
-
-                productCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Add to cart functionality
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        const cartItems = document.getElementById('cart-items');
-        const cartTotal = document.getElementById('cart-total');
-
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const name = button.getAttribute('data-name');
-                const price = parseFloat(button.getAttribute('data-price'));
-
-                // Check if item already exists in cart
-                const existingItem = cart.find(item => item.name === name);
-                
-                if (existingItem) {
-                    existingItem.quantity += 1;
-                } else {
-                    cart.push({ name, price, quantity: 1 });
-                }
-
-                updateCart();
-            });
-        });
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCart();
+        }
 
         function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            
             cartItems.innerHTML = '';
             total = 0;
 
-            cart.forEach((item, index) => {
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
                 const cartItem = document.createElement('div');
                 cartItem.className = 'cart-item';
                 cartItem.innerHTML = `
-                    <span>${item.name} (${item.quantity})</span>
-                    <span>$${(item.price * item.quantity).toFixed(2)}</span>
-                    <button onclick="removeFromCart(${index})" style="background: #e53e3e; color: white; border: none; border-radius: 3px; padding: 2px 6px; cursor: pointer;">×</button>
+                    <div>
+                        <div>${item.name}</div>
+                        <div>$${item.price.toFixed(2)} x ${item.quantity}</div>
+                    </div>
+                    <button onclick="removeFromCart('${item.name}')" style="background: #ff4444; color: white; border: none; padding: 0.2rem 0.5rem; border-radius: 4px; cursor: pointer;">×</button>
                 `;
                 cartItems.appendChild(cartItem);
-                total += item.price * item.quantity;
             });
 
             cartTotal.textContent = `Total: $${total.toFixed(2)}`;
         }
 
-        function removeFromCart(index) {
-            cart.splice(index, 1);
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            alert(`Thank you for your order! Total: $${total.toFixed(2)}\n\nWe'll process your order and send you a confirmation email soon.`);
+            cart = [];
             updateCart();
         }
+
+        // Product filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter products
+                const filter = btn.dataset.filter;
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    if (filter === 'all' || product.dataset.category === filter) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -550,13 +761,6 @@
                     });
                 }
             });
-        });
-
-        // Contact form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
         });
     </script>
 </body>
